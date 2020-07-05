@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 """
 Example classifier on Numerai data using a xgboost regression.
 To get started, install the required packages: pip install pandas numpy sklearn xgboost
@@ -61,7 +61,7 @@ def main():
     print("Training model...")
     # This is the model that generates the included example predictions file
     # Taking too long? Set learning_rate=0.1 and n_estimators=200 to make this run faster
-    model = XGBRegressor(max_depth=5, learning_rate=0.01, n_estimators=2000, n_jobs=-1, colsample_bytree=0.1)
+    model = XGBRegressor(max_depth=5, learning_rate=0.01, n_estimators=20000, n_jobs=-1, colsample_bytree=0.1)
     model.fit(training_data[feature_names], training_data[TARGET_NAME])
 
     # Generate predictions on both training and tournament data
